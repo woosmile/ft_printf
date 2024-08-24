@@ -60,8 +60,7 @@
 
 ```
 if (num >= 0 && c != 'u' && (options.blank || options.plus))
-		r_len = r_len + 1 \
-		- (!num && options.prec_flag && (options.blank || options.plus));
+	r_len = r_len + 1 - (!num && options.prec_flag && (options.blank || options.plus));
 ```
 
 - num이 0이면서 precision이 존재하고 blank, plus 플래그가 있다면  blank 또는 plus 기호 하나만 표시되어야 하므로 논리계산을 활용해 +1 - 1 = 0으로 조정함
